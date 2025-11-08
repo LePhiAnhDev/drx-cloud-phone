@@ -240,15 +240,16 @@ const PlatformOrbit = () => {
         {/* Center Icon - Logo (tăng kích thước) */}
         <div className="absolute -translate-x-1/2 -translate-y-1/2 z-10">
           <IconWrapper
-            className="w-32 h-32 p-5"
+            className="w-40 h-32 p-4"
             isHighlighted={true}
             animationDelay={0}
           >
-            <div className="relative w-full h-full">
+            <div className="relative w-full h-full flex items-center justify-center">
               <Image
                 src="/logo.png"
                 alt="DRX Cloud Phone"
-                fill
+                width={144}
+                height={48}
                 className="object-contain"
               />
             </div>

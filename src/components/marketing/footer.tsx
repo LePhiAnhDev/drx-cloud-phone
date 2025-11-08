@@ -21,7 +21,7 @@ const Footer = () => {
                     />
                     <div className="flex flex-col items-start max-w-48">
                         <div className="flex items-center gap-2">
-                            <Image src="/logo.png" alt="Logo" width={40} height={20} className="h-5 w-auto object-contain" />
+                            <Image src="/logo.png" alt="Logo" width={96} height={32} className="h-6 w-auto object-contain" />
                             <span className="text-xl font-medium">
                                 DrxCloudPhone
                             </span>
