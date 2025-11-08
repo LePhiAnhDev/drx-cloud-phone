@@ -20,10 +20,10 @@ const Pricing = () => {
                 <div className="flex flex-col items-center text-center max-w-xl mx-auto">
                     <SectionBadge title="Choose your plan" />
                     <h2 className="text-2xl md:text-4xl lg:text-5xl font-heading font-medium !leading-snug mt-6">
-                        Simple and transparent pricing
+                        Flexible pricing for every scale
                     </h2>
                     <p className="text-base md:text-lg text-center text-accent-foreground/80 mt-6">
-                        Choose the plan that suits your needs. No hidden fees, no surprises.
+                        Choose the plan that matches your device operations scale. From startups to enterprises managing millions of devices.
                     </p>
                 </div>
             </Container>
@@ -81,6 +81,7 @@ const Plan = ({
     features,
     index,
     plan,
+    badge,
 }: {
     id: string;
     title: string;
@@ -91,6 +92,7 @@ const Plan = ({
     features: string[];
     index: number;
     plan: Plan;
+    badge?: string;
 }) => {
 
     const getDisplayedPrice = (plan: string, monthlyPrice: number, yearlyPrice: number) => {
@@ -111,13 +113,13 @@ const Plan = ({
             <div
                 className={cn(
                     "flex flex-col size-full border rounded-2xl relative p-3 [background-image:linear-gradient(345deg,rgba(255,255,255,0.01)_0%,rgba(255,255,255,0.03)_100%)]",
-                    id === "pro" ? "border-primary/80" : "border-border/60",
+                    id === "professional" ? "border-primary/80" : "border-border/60",
                 )}
             >
-                {id === "pro" && (
+                {badge && (
                     <div className="max-w-fit min-w-min inline-flex items-center whitespace-nowrap px-1 h-7 rounded-full bg-gradient-to-r from-primary to-violet-500 absolute -top-3 left-1/2 -translate-x-1/2 select-none">
                         <span className="flex-1 text-sm px-2 font-medium bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent bg-[length:250%_100%] animate-background-shine">
-                            Most Popular
+                            {badge}
                         </span>
                     </div>
                 )}
@@ -142,7 +144,7 @@ const Plan = ({
                             </span>
                         </div>
                         <AnimatePresence>
-                            {(id !== "free" && plan === "yearly") && (
+                            {(id !== "starter" && plan === "yearly") && (
                                 <motion.span
                                     initial={{ opacity: 0, scale: 0 }}
                                     animate={{ opacity: 1, scale: 1 }}
@@ -170,7 +172,7 @@ const Plan = ({
                 <div className="p-3 mt- h-auto flex w-full items-center">
                     <Button
                         asChild
-                        variant={id === "pro" ? "default" : "tertiary"}
+                        variant={id === "professional" ? "default" : "tertiary"}
                         className="w-full hover:scale-100 hover:translate-y-0 shadow-none"
                     >
 

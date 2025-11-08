@@ -1,36 +1,46 @@
 import { Icons } from "@/components";
-import { ZapIcon, ChartSplineIcon, LifeBuoyIcon, PaletteIcon, ShieldCheckIcon, WaypointsIcon, BrainCircuitIcon, SparklesIcon } from "lucide-react";
+import { Smartphone, Video, Brain, MessageSquare, ShieldCheck, TrendingUp, Users, Zap } from "lucide-react";
 import React from "react";
 
 export const PERKS = [
     {
-        icon: ZapIcon,
-        title: "Fast and Efficient",
-        description: "Experience quick and seamless content creation with our optimized AI tools."
+        icon: Smartphone,
+        title: "Millions of Devices",
+        description: "The only wireless system operating millions of iPhones & Samsungs for maximum scale and efficiency."
     },
     {
-        icon: ChartSplineIcon,
-        title: "Insightful Analytics",
-        description: "Gain valuable insights and analytics to enhance your social media strategy."
+        icon: Video,
+        title: "Native Video Processing",
+        description: "Process original videos to legitimately bypass platform policies with maximum effectiveness."
     },
     {
-        icon: LifeBuoyIcon,
-        title: "24/7 Support",
-        description: "Our team is available around the clock to assist with any issues or questions."
+        icon: Brain,
+        title: "Strong AI Ecosystem",
+        description: "Direct API connection with DrXAIKOC, DrXAIStudio for AI-powered creative content generation."
     },
     {
-        icon: PaletteIcon,
-        title: "Customizable Solutions",
-        description: "Tailor the tools and features to fit your unique social media needs."
+        icon: MessageSquare,
+        title: "DrXAIChat Integration",
+        description: "Consolidates all customer messages from Page and seeding accounts, finalizing orders on the spot."
     },
     {
-        icon: ShieldCheckIcon,
-        title: "Secure and Reliable",
-        description: "Trust our platform to keep your data safe and ensure consistent performance."
+        icon: ShieldCheck,
+        title: "Account Trust Optimization",
+        description: "Thoroughly optimized to maximize account trust and operation lifespan, addressing core business pain points."
     },
     {
-        icon: WaypointsIcon,
-        title: "Seamless Integration",
-        description: "Easily integrate with your existing social media platforms and tools."
+        icon: TrendingUp,
+        title: "Platform Coverage",
+        description: "Support all major platforms: TikTok, Facebook, Instagram, Google, YouTube, Shopee, and X."
+    },
+    {
+        icon: Users,
+        title: "Feedback-Driven",
+        description: "We are not perfect, but always listen to feedback to best suit your needs and improve continuously."
+    },
+    {
+        icon: Zap,
+        title: "Highest Efficiency",
+        description: "Streamlined operations and automated workflows ensure maximum productivity and minimal manual intervention."
     },
 ];

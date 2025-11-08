@@ -3,37 +3,38 @@ export const FOOTER_LINKS = [
         title: "Product",
         links: [
             { name: "Home", href: "/" },
-            { name: "Features", href: "/" },
-            { name: "Pricing", href: "/" },
-            { name: "Contact", href: "/" },
-            { name: "Download", href: "/" },
+            { name: "Features", href: "/#features" },
+            { name: "Pricing", href: "/#pricing" },
+            { name: "Platforms", href: "/#platforms" },
+            { name: "AI Ecosystem", href: "/#ai" },
+        ],
+    },
+    {
+        title: "Platforms",
+        links: [
+            { name: "TikTok", href: "/platforms/tiktok" },
+            { name: "Facebook", href: "/platforms/facebook" },
+            { name: "Instagram", href: "/platforms/instagram" },
+            { name: "YouTube", href: "/platforms/youtube" },
+            { name: "Shopee", href: "/platforms/shopee" },
         ],
     },
     {
         title: "Resources",
         links: [
-            { name: "Blog", href: "/blog" },
-            { name: "Help Center", href: "/help-center" },
-            { name: "Community", href: "/community" },
+            { name: "Documentation", href: "/docs" },
+            { name: "Help Center", href: "/help" },
+            { name: "API Integration", href: "/api" },
             { name: "Guides", href: "/guides" },
         ],
     },
     {
-        title: "Legal",
+        title: "Company",
         links: [
+            { name: "About", href: "/about" },
+            { name: "Contact", href: "/contact" },
             { name: "Privacy", href: "/privacy" },
             { name: "Terms", href: "/terms" },
-            { name: "Cookies", href: "/cookies" },
-        ],
-    },
-    {
-        title: "Developers",
-        links: [
-            { name: "API Docs", href: "/api-docs" },
-            { name: "SDKs", href: "/sdks" },
-            { name: "Tools", href: "/tools" },
-            { name: "Open Source", href: "/open-source" },
-            { name: "Changelog", href: "/changelog" },
         ],
     },
 ];
