@@ -11,7 +11,7 @@ const Footer = () => {
     return (
         <footer className="w-full py-10 relative">
             <Container>
-                <Wrapper className="relative flex flex-col md:flex-row justify-between pb-40 overflow-hidden footer">
+                <Wrapper className="relative flex flex-col md:flex-row md:justify-between md:items-start gap-10 md:gap-12 lg:gap-16 pb-40 overflow-hidden footer">
                     <Particles
                         className="absolute inset-0 w-full -z-10"
                         quantity={40}
@@ -19,21 +19,21 @@ const Footer = () => {
                         color="#d4d4d8"
                         refresh
                     />
-                    <div className="flex flex-col items-start max-w-48">
-                        <div className="flex items-center gap-2">
+                    <div className="flex flex-col items-start w-full md:w-auto md:flex-1 md:max-w-md lg:max-w-lg xl:max-w-xl">
+                        <div className="flex items-center gap-2 mb-4">
                             <Image src="/logo.png" alt="Logo" width={96} height={32} className="h-6 w-auto object-contain" />
                             <span className="text-xl font-medium">
                                 DrxCloudPhone
                             </span>
                         </div>
-                        <p className="text-base max-w mt-4">
+                        <p className="text-base text-muted-foreground leading-relaxed mt-4 w-full max-w-none md:max-w-full">
                             The only wireless system operating millions of iPhones & Samsungs, processing native original videos to legitimately bypass platform policies.
                         </p>
-                        <Button className="mt-8">
+                        <Button className="mt-8 w-full sm:w-auto">
                             Start for free
                         </Button>
                     </div>
-                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-lg mt-10 md:mt-0">
+                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 w-full md:w-auto md:flex-shrink-0 md:max-w-lg mt-0">
                         {FOOTER_LINKS?.map((section, index) => (
                             <div key={index} className="flex flex-col gap-4">
                                 <h4 className="text-sm font-medium">
