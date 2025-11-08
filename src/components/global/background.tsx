@@ -1,4 +1,6 @@
+'use client';
 import React from 'react';
+import DotGrid from '@/components/ui/dot-grid';
 
 interface Props {
     children: React.ReactNode
@@ -6,7 +8,22 @@ interface Props {
 
 const Background = ({ children }: Props) => {
     return (
-        <main id='background' className="flex-none min-h-scree -z-10">
+        <main id='background' className="flex-none min-h-scree -z-10 relative">
+            {/* Dot Grid Background */}
+            <DotGrid
+                dotSize={2}
+                gap={24}
+                baseColor="#3b3b3b"
+                activeColor="#8b5cf6"
+                proximity={120}
+                speedTrigger={100}
+                shockRadius={250}
+                shockStrength={5}
+                maxSpeed={5000}
+                resistance={750}
+                returnDuration={1.5}
+                className="opacity-40"
+            />
 
             {/* <div className="absolute h-full inset-0 bg-dot-foreground/[0.2] hidden lg:flex"></div> */}
 
