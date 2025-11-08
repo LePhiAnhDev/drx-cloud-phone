@@ -12,60 +12,63 @@ type PLAN = {
 
 export const PLANS: PLAN[] = [
     {
-        id: "free",
-        title: "Free",
-        desc: "Get started with essential tools for social media content creation",
-        monthlyPrice: 0,
-        yearlyPrice: 0,
+        id: "starter",
+        title: "Starter",
+        desc: "Perfect for small businesses getting started with wireless device operations",
+        monthlyPrice: 99,
+        yearlyPrice: 990,
         buttonText: "Get Started",
         features: [
-            "Basic AI content generation",
-            "4 social media integrations",
+            "Up to 100 devices",
+            "Basic video processing",
+            "Support for 3 platforms",
             "Community support",
-            "1 project limit",
-            "Standard analytics",
-            "Basic image generation"
+            "Standard account trust optimization",
+            "Basic AI integration"
         ],
-        link: "https://stripe.com/free-plan-link"
+        link: "#"
     },
     {
-        id: "pro",
-        title: "Pro",
-        desc: "Unlock advance features for enhanced content and strategy",
-        monthlyPrice: 10,
-        yearlyPrice: 120,
+        id: "professional",
+        title: "Professional",
+        desc: "Ideal for growing businesses operating at scale across multiple platforms",
+        monthlyPrice: 299,
+        yearlyPrice: 2990,
         badge: "Most Popular",
-        buttonText: "Upgrade to Pro",
+        buttonText: "Upgrade to Professional",
         features: [
-            "Advanced AI content generation",
-            "10 social media integrations",
-            "Priority email support",
-            "10 project limit",
-            "Enhanced analytics & insights",
-            "Pro model image generation",
-            "Team collaboration tools",
-            "Custom branding options"
+            "Up to 1,000 devices",
+            "Advanced native video processing",
+            "All platform integrations (TikTok, Facebook, Instagram, Google, YouTube, Shopee, X)",
+            "Priority support",
+            "Enhanced account trust optimization",
+            "Full AI ecosystem access (DrXAIKOC, DrXAIStudio)",
+            "DrXAIChat integration",
+            "Advanced analytics & reporting"
         ],
-        link: "https://stripe.com/pro-plan-link"
+        link: "#"
     },
     {
         id: "enterprise",
         title: "Enterprise",
-        desc: "Tailored solutions for large organizations and agencies",
-        monthlyPrice: 15,
-        yearlyPrice: 180,
+        desc: "For large-scale operations managing millions of devices",
+        monthlyPrice: 999,
+        yearlyPrice: 9990,
         badge: "Contact Sales",
-        buttonText: "Upgrade to Enterprise",
+        buttonText: "Contact Sales",
         features: [
-            "Unlimited AI content generation",
-            "All social media integrations",
+            "Unlimited devices",
+            "Premium video processing",
+            "All platform integrations",
             "Dedicated account manager",
-            "Unlimited projects",
+            "Maximum account trust optimization",
+            "Full AI ecosystem with custom integrations",
+            "Advanced DrXAIChat features",
             "Custom analytics & reporting",
             "Enterprise-grade security",
-            "Free updates",
-            // "24/7 priority support"
+            "24/7 priority support",
+            "Custom SLA guarantees"
         ],
-        link: "https://stripe.com/enterprise-plan-link"
+        link: "#"
     }
 ];

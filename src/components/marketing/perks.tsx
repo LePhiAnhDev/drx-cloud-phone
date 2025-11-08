@@ -11,16 +11,16 @@ const Perks = () => {
                 <div className="flex flex-col items-center text-center max-w-2xl mx-auto">
                     <SectionBadge title="Perks" />
                     <h2 className="text-2xl md:text-4xl lg:text-5xl font-heading font-medium !leading-snug mt-6">
-                        Discover the benefits
+                        Why choose DrXCloudPhone
                     </h2>
                     <p className="text-base md:text-lg text-center text-accent-foreground/80 mt-6">
-                        Explore the powerful features and advantages that DrxCloudPhone offer to help you grow your social media presence
+                        Discover the powerful advantages that make DrXCloudPhone the leading wireless system for operating millions of devices across all major platforms
                     </p>
                 </div>
             </Container>
             <Container>
                 <div className="mt-16 w-full">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full relative">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full relative">
                         {PERKS.map((perk, index) => (
                             <Perk key={index} index={index} {...perk} />
                         ))}
@@ -46,14 +46,14 @@ const Perk = ({
         <div
             className={cn(
                 "flex flex-col lg:border-r transform-gpu py-10 relative group/feature border-neutral-800",
-                (index === 0 || index === 3) && "lg:border-l",
-                index < 3 && "lg:border-b"
+                (index === 0 || index === 4) && "lg:border-l",
+                index < 4 && "lg:border-b"
             )}
         >
-            {index < 3 && (
+            {index < 4 && (
                 <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-neutral-80 from-violet-950/25 to-transparent pointer-events-none" />
             )}
-            {index >= 3 && (
+            {index >= 4 && (
                 <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-neutral-80 from-violet-950/25 to-transparent pointer-events-none" />
             )}
             <div className="group-hover/feature:-translate-y-1 transform-gpu transition-all duration-300 flex flex-col w-full">

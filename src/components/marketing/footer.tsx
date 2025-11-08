@@ -26,7 +26,7 @@ const Footer = () => {
                             </span>
                         </div>
                         <p className="text-base max-w mt-4">
-                            Empower your business with our AI tools.
+                            The only wireless system operating millions of iPhones & Samsungs, processing native original videos to legitimately bypass platform policies.
                         </p>
                         <Button className="mt-8">
                             Start for free

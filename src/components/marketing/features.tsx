@@ -14,10 +14,10 @@ const Features = () => {
                 <div className="flex flex-col items-center text-center max-w-2xl mx-auto">
                     <SectionBadge title="Features" />
                     <h2 className="text-2xl md:text-4xl lg:text-5xl font-heading font-medium !leading-snug mt-6">
-                        Create content faster <br /> and smarter
+                        Powerful wireless system <br /> for millions of devices
                     </h2>
                     <p className="text-base md:text-lg text-center text-accent-foreground/80 mt-6">
-                        Transform your social media strategy with DrxCloudPhone&apos;s cutting-edge features, designed to optimize your content creation and engagement like never before.
+                        DrXCloudPhone operates millions of iPhones & Samsungs, processing native original videos to legitimately bypass platform policies with maximum effectiveness.
                     </p>
                 </div>
             </Container>
@@ -40,10 +40,10 @@ const Features = () => {
                                     </div>
                                     <div className="flex flex-col">
                                         <h4 className="text-xl font-heading font-medium heading ">
-                                            Get advanced analytics
+                                            Native video processing
                                         </h4>
                                         <p className="text-sm md:text-base mt-2 text-muted-foreground">
-                                            Track your performance with detailed analytics and optimize to get better results.
+                                            Process original videos from millions of devices to legitimately bypass platform policies with maximum effectiveness.
                                         </p>
                                     </div>
                                 </div>
@@ -60,10 +60,10 @@ const Features = () => {
                                     </div>
                                     <div className="flex flex-col mt-auto">
                                         <h4 className="text-xl font-heading font-medium heading">
-                                            Content ideation
+                                            Strong AI ecosystem
                                         </h4>
                                         <p className="text-sm md:text-base mt-2 text-muted-foreground">
-                                            Generate ideas for your content with our AI-powered tools to create engaging posts in seconds.
+                                            Direct API connection with DrXAIKOC, DrXAIStudio for AI-powered creative content generation and professional photo/video editing.
                                         </p>
                                     </div>
                                 </div>
@@ -73,7 +73,7 @@ const Features = () => {
                                     <div className="bento-card w-full relative items-center justify-center">
                                         <div className="w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                                             <p className="text-base text-muted-foreground text-justify [mask-image:radial-gradient(50%_50%_at_50%_50%,#BAB3FF_0%,rgba(186,179,255,0)_90.69%)]">
-                                                We use AI to help you create content that resonates with your audience. Our tools are designed to optimize your content creation and engagement like never before. Transform your social media strategy with DrxCloudPhone&apos;s cutting-edge features. Reach your audience with the right message at the right time. Create content faster and smarter with DrxCloudPhone. Transform your social media strategy with DrxCloudPhone&apos;s cutting-edge features. Create content faster and smarter with DrxCloudPhone. Transform your social media strategy with DrxCloudPhone&apos;s cutting-edge features. Create content faster and smarter with DrxCloudPhone.
+                                                DrXCloudPhone is the only wireless system operating millions of iPhones & Samsungs. We understand the pain of account trust & operation lifespan affecting business. Our system is thoroughly optimized to maximize account trust and operational efficiency. We process native original videos to legitimately bypass platform policies with maximum effectiveness. Our strong AI ecosystem integrates seamlessly with DrXAIKOC and DrXAIStudio for creative content generation. DrXAIChat consolidates all customer messages for highest efficiency. We are not perfect, but always listen to feedback to best suit your needs.
                                             </p>
                                         </div>
                                         <div className="w-full h-16 relative">
@@ -98,10 +98,10 @@ const Features = () => {
                                 <div className="bento-card w-full flex-row gap-6">
                                     <div className="flex flex-col mb-auto">
                                         <h4 className="text-xl font-heading font-medium heading ">
-                                            Seamless integrations
+                                            Account trust optimization
                                         </h4>
                                         <p className="text-sm md:text-base mt-2 text-muted-foreground">
-                                            Connect your favorite tools and platforms to streamline your workflow and save time.
+                                            Thoroughly optimized system to maximize account trust and operation lifespan, addressing the core pain points affecting your business.
                                         </p>
                                     </div>
                                     <div className="w-full h-28 relative">
@@ -121,10 +121,10 @@ const Features = () => {
                                     </div>
                                     <div className="flex flex-col mt-auto">
                                         <h4 className="text-xl font-heading font-medium heading ">
-                                            Image generation with AI
+                                            DrXAIChat integration
                                         </h4>
                                         <p className="text-sm md:text-base mt-2 text-muted-foreground">
-                                            Create stunning images with AI-powered tools in seconds.
+                                            Consolidates all customer messages from Page and seeding accounts, finalizing orders on the spot with highest efficiency.
                                         </p>
                                     </div>
                                 </div>
@@ -136,10 +136,10 @@ const Features = () => {
                                     </div>
                                     <div className="flex flex-col mt-auto">
                                         <h4 className="text-xl font-heading font-medium heading ">
-                                            Hashtags suggestions
+                                            Multi-platform support
                                         </h4>
                                         <p className="text-sm md:text-base mt-2 text-muted-foreground">
-                                            Get hashtag suggestions based on your content and audience to increase your reach and engagement.
+                                            Support all major platforms: TikTok, Facebook, Instagram, Google, YouTube, Shopee, and X for comprehensive coverage.
                                         </p>
                                     </div>
                                 </div>

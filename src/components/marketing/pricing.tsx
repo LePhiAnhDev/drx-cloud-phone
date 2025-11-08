@@ -1,187 +1,261 @@
 "use client";
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { PLANS } from "@/constants";
-import { cn } from "@/functions";
-import { AnimatePresence, motion } from "framer-motion";
-import { CheckIcon } from "lucide-react";
-import Link from "next/link";
 import Container from "../global/container";
-import { Button } from "../ui/button";
-import NumberTicker from "../ui/number-ticker";
 import { SectionBadge } from "../ui/section-bade";
+import { Button } from "../ui/button";
+import { Badge } from "../ui/badge";
+import { Card, CardContent, CardHeader } from "../ui/card";
+import Link from "next/link";
+import { Smartphone, CreditCard, Banknote, TrendingUp, AlertCircle } from "lucide-react";
 
-type Plan = "monthly" | "yearly";
+// Device rental pricing data
+const DEVICE_PLANS = [
+    {
+        model: "iPhone 6S",
+        withDeposit: 140,
+        withoutDeposit: 170,
+        deposit: 650,
+    },
+    {
+        model: "iPhone 7G",
+        withDeposit: 150,
+        withoutDeposit: 180,
+        deposit: 1000,
+    },
+    {
+        model: "iPhone SE3",
+        withDeposit: 400,
+        withoutDeposit: 430,
+        deposit: 3350,
+    },
+    {
+        model: "iPhone X",
+        withDeposit: 300,
+        withoutDeposit: 330,
+        deposit: 2550,
+    },
+    {
+        model: "iPhone XS",
+        withDeposit: 300,
+        withoutDeposit: 330,
+        deposit: 3050,
+    },
+    {
+        model: "iPhone 12",
+        withDeposit: 400,
+        withoutDeposit: 430,
+        deposit: 5050,
+    },
+    {
+        model: "iPhone 13",
+        withDeposit: 550,
+        withoutDeposit: 580,
+        deposit: null, // Out of stock
+        highlight: true,
+    },
+    {
+        model: "iPhone XS Max",
+        withDeposit: 350,
+        withoutDeposit: 380,
+        deposit: 4050,
+    },
+    {
+        model: "iPhone 12 Pro Max",
+        withDeposit: 450,
+        withoutDeposit: 480,
+        deposit: 7550,
+    },
+    {
+        model: "iPhone 14 Plus",
+        withDeposit: 450,
+        withoutDeposit: 480,
+        deposit: 6550,
+    },
+];
+
+// Format price in Vietnamese currency with dot separator
+const formatPrice = (price: number | null): string => {
+    if (price === null) return "Out of Stock";
+    // Convert to thousands (e.g., 140 -> 140000)
+    const priceInVND = price * 1000;
+    // Format with dot separator (e.g., 140000 -> 140.000)
+    return `${priceInVND.toLocaleString('vi-VN')}₫`;
+};
 
 const Pricing = () => {
     return (
-        <div className="flex flex-col items-center justify-center py-12 md:py-16 lg:py-24  w-full relative">
+        <div className="flex flex-col items-center justify-center py-12 md:py-16 lg:py-24 w-full relative">
             <Container>
-                <div className="flex flex-col items-center text-center max-w-xl mx-auto">
+                <div className="flex flex-col items-center text-center max-w-2xl mx-auto">
                     <SectionBadge title="Choose your plan" />
                     <h2 className="text-2xl md:text-4xl lg:text-5xl font-heading font-medium !leading-snug mt-6">
-                        Simple and transparent pricing
+                        iPhone device rental pricing
                     </h2>
                     <p className="text-base md:text-lg text-center text-accent-foreground/80 mt-6">
-                        Choose the plan that suits your needs. No hidden fees, no surprises.
+                        Competitive monthly rental rates for iPhone devices. Flexible pricing options to match your operational needs.
                     </p>
                 </div>
             </Container>
-            <div className="mt-8 w-full relative flex flex-col items-center justify-center">
+
+            <div className="mt-12 w-full relative flex flex-col items-center justify-center">
                 <div className="absolute hidden lg:block top-1/2 right-2/3 translate-x-1/4 -translate-y-1/2 w-96 h-96 bg-primary/15 blur-[10rem] -z-10"></div>
                 <div className="absolute hidden lg:block top-1/2 left-2/3 -translate-x-1/4 -translate-y-1/2 w-96 h-96 bg-violet-500/15 blur-[10rem] -z-10"></div>
+                
                 <Container>
-                    <Tabs defaultValue="monthly" className="w-full flex flex-col items-center justify-center">
-                        <TabsList>
-                            <TabsTrigger value="monthly">
-                                Monthly
-                            </TabsTrigger>
-                            <TabsTrigger value="yearly">
-                                Yearly
-                            </TabsTrigger>
-                        </TabsList>
-                        <TabsContent value="monthly">
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full mt-14">
-                                {PLANS.map((plan, index) => (
-                                    <Plan
-                                        key={index}
-                                        index={index}
-                                        {...plan}
-                                        plan="monthly"
-                                    />
-                                ))}
-                            </div>
-                        </TabsContent>
-                        <TabsContent value="yearly">
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full mt-14">
-                                {PLANS.map((plan, index) => (
-                                    <Plan
-                                        key={index}
-                                        index={index}
-                                        {...plan}
-                                        plan="yearly"
-                                    />
-                                ))}
-                            </div>
-                        </TabsContent>
-                    </Tabs>
+                    {/* Desktop Table */}
+                    <div className="hidden md:block w-full overflow-x-auto">
+                        <Card className="border-border/60 backdrop-blur-sm bg-background/50">
+                            <table className="w-full">
+                                <thead>
+                                    <tr className="border-b border-border/60">
+                                        <th className="text-left p-4 md:p-6 font-semibold text-base">
+                                            <div className="flex items-center gap-2">
+                                                <Smartphone className="w-4 h-4 text-muted-foreground" />
+                                                Device Model
+                                            </div>
+                                        </th>
+                                        <th className="text-center p-4 md:p-6 font-semibold text-base">
+                                            <div className="flex flex-col items-center gap-1">
+                                                <div className="flex items-center gap-2">
+                                                    <Banknote className="w-4 h-4 text-muted-foreground" />
+                                                    With Deposit
+                                                </div>
+                                                <span className="text-xs font-normal text-muted-foreground">Physical device</span>
+                                            </div>
+                                        </th>
+                                        <th className="text-center p-4 md:p-6 font-semibold text-base">
+                                            <div className="flex flex-col items-center gap-1">
+                                                <div className="flex items-center gap-2">
+                                                    <TrendingUp className="w-4 h-4 text-muted-foreground" />
+                                                    No Deposit
+                                                </div>
+                                                <span className="text-xs font-normal text-muted-foreground">Online rental</span>
+                                            </div>
+                                        </th>
+                                        <th className="text-center p-4 md:p-6 font-semibold text-base">
+                                            <div className="flex items-center justify-center gap-2">
+                                                <CreditCard className="w-4 h-4 text-muted-foreground" />
+                                                Deposit Amount
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {DEVICE_PLANS.map((device, index) => (
+                                        <tr
+                                            key={index}
+                                            className={`border-b border-border/40 last:border-b-0 transition-colors hover:bg-muted/20 ${
+                                                device.highlight ? "bg-primary/5" : ""
+                                            }`}
+                                        >
+                                            <td className="p-4 md:p-6 font-medium text-base">
+                                                <div className="flex items-center gap-2">
+                                                    {device.model}
+                                                    {device.highlight && (
+                                                        <Badge variant="default" className="bg-primary/20 text-primary hover:bg-primary/30">
+                                                            Popular
+                                                        </Badge>
+                                                    )}
+                                                </div>
+                                            </td>
+                                            <td className="p-4 md:p-6 text-center text-base font-semibold text-primary">
+                                                {formatPrice(device.withDeposit)}/mo
+                                            </td>
+                                            <td className="p-4 md:p-6 text-center text-base font-semibold text-primary">
+                                                {formatPrice(device.withoutDeposit)}/mo
+                                            </td>
+                                            <td className="p-4 md:p-6 text-center text-base font-semibold">
+                                                {device.deposit === null ? (
+                                                    <Badge variant="destructive">Out of Stock</Badge>
+                                                ) : (
+                                                    <span className="text-foreground">{formatPrice(device.deposit)}</span>
+                                                )}
+                                            </td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </Card>
+                    </div>
+
+                    {/* Mobile Cards */}
+                    <div className="md:hidden w-full space-y-4">
+                        {DEVICE_PLANS.map((device, index) => (
+                            <Card
+                                key={index}
+                                className={`backdrop-blur-sm bg-background/50 ${
+                                    device.highlight ? "border-primary/50 bg-primary/5" : ""
+                                }`}
+                            >
+                                <CardHeader className="pb-3">
+                                    <div className="flex items-center justify-between">
+                                        <div className="flex items-center gap-2">
+                                            <Smartphone className="w-4 h-4 text-muted-foreground" />
+                                            <h3 className="font-semibold text-base">{device.model}</h3>
+                                        </div>
+                                        {device.highlight && (
+                                            <Badge variant="default" className="bg-primary/20 text-primary hover:bg-primary/30">
+                                                Popular
+                                            </Badge>
+                                        )}
+                                    </div>
+                                </CardHeader>
+                                <CardContent className="space-y-3 pt-0">
+                                    <div className="flex justify-between items-center py-2 border-b border-border/40">
+                                        <span className="text-sm text-muted-foreground flex items-center gap-2">
+                                            <Banknote className="w-3.5 h-3.5" />
+                                            With Deposit
+                                        </span>
+                                        <span className="font-semibold text-primary">{formatPrice(device.withDeposit)}/mo</span>
+                                    </div>
+                                    <div className="flex justify-between items-center py-2 border-b border-border/40">
+                                        <span className="text-sm text-muted-foreground flex items-center gap-2">
+                                            <TrendingUp className="w-3.5 h-3.5" />
+                                            No Deposit
+                                        </span>
+                                        <span className="font-semibold text-primary">{formatPrice(device.withoutDeposit)}/mo</span>
+                                    </div>
+                                    <div className="flex justify-between items-center py-2">
+                                        <span className="text-sm text-muted-foreground flex items-center gap-2">
+                                            <CreditCard className="w-3.5 h-3.5" />
+                                            Deposit
+                                        </span>
+                                        {device.deposit === null ? (
+                                            <Badge variant="destructive">Out of Stock</Badge>
+                                        ) : (
+                                            <span className="font-semibold text-foreground">{formatPrice(device.deposit)}</span>
+                                        )}
+                                    </div>
+                                </CardContent>
+                            </Card>
+                        ))}
+                    </div>
+
+                    {/* Important Notice */}
+                    <Card className="mt-8 border-border/60 backdrop-blur-sm bg-muted/20">
+                        <CardContent className="p-6">
+                            <h3 className="font-semibold text-lg mb-3 flex items-center gap-2">
+                                <AlertCircle className="w-5 h-5 text-primary" />
+                                Important Notice
+                            </h3>
+                            <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                                For bulk orders, custom pricing is available. Rates may vary based on market conditions and specific device requirements. Please contact us for a personalized quote.
+                            </p>
+                        </CardContent>
+                    </Card>
+
+                    {/* CTA Button */}
+                    <div className="mt-8 flex justify-center">
+                        <Button size="lg" asChild>
+                            <Link href="#">
+                                Contact Sales
+                            </Link>
+                        </Button>
+                    </div>
                 </Container>
             </div>
         </div>
-    )
+    );
 };
 
-const Plan = ({
-    id,
-    title,
-    desc,
-    monthlyPrice,
-    yearlyPrice,
-    buttonText,
-    features,
-    index,
-    plan,
-}: {
-    id: string;
-    title: string;
-    desc: string;
-    monthlyPrice: number;
-    yearlyPrice: number;
-    buttonText: string;
-    features: string[];
-    index: number;
-    plan: Plan;
-}) => {
-
-    const getDisplayedPrice = (plan: string, monthlyPrice: number, yearlyPrice: number) => {
-        if (plan === "monthly") {
-            return monthlyPrice === 0 ? 0 : monthlyPrice;
-        } else if (plan === "yearly") {
-            const discountedPrice = Math.round((yearlyPrice * 0.8) / 12);
-            return yearlyPrice === 0 ? 0 : discountedPrice;
-        }
-        return 0;
-    };
-
-    const displayedPrice = getDisplayedPrice(plan, monthlyPrice, yearlyPrice);
-
-    return (
-        <div key={index} className="w-full relative flex flex-col saturate-150 rounded-2xl">
-
-            <div
-                className={cn(
-                    "flex flex-col size-full border rounded-2xl relative p-3 [background-image:linear-gradient(345deg,rgba(255,255,255,0.01)_0%,rgba(255,255,255,0.03)_100%)]",
-                    id === "pro" ? "border-primary/80" : "border-border/60",
-                )}
-            >
-                {id === "pro" && (
-                    <div className="max-w-fit min-w-min inline-flex items-center whitespace-nowrap px-1 h-7 rounded-full bg-gradient-to-r from-primary to-violet-500 absolute -top-3 left-1/2 -translate-x-1/2 select-none">
-                        <span className="flex-1 text-sm px-2 font-medium bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent bg-[length:250%_100%] animate-background-shine">
-                            Most Popular
-                        </span>
-                    </div>
-                )}
-                <div className="flex flex-col p-3 w-full">
-                    <h2 className="text-xl font-medium">
-                        {title}
-                    </h2>
-                    <p className="text-sm mt-2 text-muted-foreground break-words">
-                        {desc}
-                    </p>
-                </div>
-                <hr className="shrink-0 border-none w-full h-px bg-border" role="separator" />
-                <div className="relative flex flex-col flex-1 align-top w-full p-3 h-full break-words text-left gap-4">
-                    <div className="flex items-end gap-2">
-                        <div className="flex items-end gap-1 w-40">
-                            <span className="text-3xl md:text-4xl font-bold">
-                                ${displayedPrice === 0 ? 0 : <NumberTicker value={displayedPrice} />}
-                            </span>
-                            {/* In here 120 * 0.8 = 96 and /12 to get monthly price */}
-                            <span className="text-lg text-muted-foreground font-medium font-headin">
-                                per {plan === "monthly" ? "month" : "month"}
-                            </span>
-                        </div>
-                        <AnimatePresence>
-                            {(id !== "free" && plan === "yearly") && (
-                                <motion.span
-                                    initial={{ opacity: 0, scale: 0 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    exit={{ opacity: 0, scale: 0 }}
-                                    transition={{ duration: 0.2 }}
-                                    aria-hidden="true"
-                                    className="text-xs px-2 py-0.5 rounded mb-1 text-foreground bg-primary font-medium"
-                                >
-                                    -20%
-                                </motion.span>
-                            )}
-                        </AnimatePresence>
-                    </div>
-                    <ul className="flex flex-col gap-2">
-                        {features.map((feature, index) => (
-                            <li key={index} className="flex items-center gap-2">
-                                <CheckIcon aria-hidden="true" className="w-5 h-5 text-primary" />
-                                <p className="text-sm md:text-base text-muted-foreground">
-                                    {feature}
-                                </p>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-                <div className="p-3 mt- h-auto flex w-full items-center">
-                    <Button
-                        asChild
-                        variant={id === "pro" ? "default" : "tertiary"}
-                        className="w-full hover:scale-100 hover:translate-y-0 shadow-none"
-                    >
-
-                        <Link href={""}>
-                            {buttonText}
-                        </Link>
-                    </Button>
-                </div>
-            </div>
-        </div>
-    )
-};
-
-export default Pricing
+export default Pricing;
