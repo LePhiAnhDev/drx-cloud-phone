@@ -1,5 +1,5 @@
 import Container from "../global/container";
-import Images from "../global/images";
+import PlatformOrbit from "./platform-orbit";
 import { Particles } from "../ui/particles";
 import { SectionBadge } from "../ui/section-bade";
 
@@ -18,10 +18,10 @@ const Connect = () => {
                 </div>
             </Container>
             <Container>
-                <div className="w-full relative mt-12">
-                    <Images.connect className="w-full h-auto" />
+                <div className="w-full relative mt-12 flex items-center justify-center min-h-[450px] md:min-h-[550px] lg:min-h-[650px]">
+                    <PlatformOrbit />
                     <Particles
-                        className="absolute inset-0"
+                        className="absolute inset-0 pointer-events-none"
                         quantity={150}
                         ease={80}
                         color="#e4e4e7"
