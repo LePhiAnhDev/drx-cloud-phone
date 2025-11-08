@@ -10,7 +10,7 @@ import Image from "next/image";
 
 const Features = () => {
     return (
-        <div className="flex flex-col items-center justify-center py-12 md:py-16 lg:py-24 w-full">
+        <section id="features" className="flex flex-col items-center justify-center py-12 md:py-16 lg:py-24 w-full">
             <Container>
                 <div className="flex flex-col items-center text-center max-w-2xl mx-auto">
                     <SectionBadge title="Features" />
@@ -112,7 +112,7 @@ const Features = () => {
                     </Container>
                 </div>
             </div>
-        </div>
+        </section>
     )
 };
 

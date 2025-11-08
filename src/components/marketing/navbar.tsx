@@ -1,7 +1,8 @@
 "use client";
 
 import { cn } from "@/functions";
-import { ArrowRightIcon, XIcon } from "lucide-react";
+import { useScrollSpy } from "@/hooks";
+import { XIcon } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from 'react';
@@ -11,9 +12,12 @@ import { Button } from "../ui/button";
 import Menu from "./menu";
 import MobileMenu from "./mobile-menu";
 
+const SECTION_IDS = ["home", "connect", "features", "pricing", "reviews"];
+
 const Navbar = () => {
 
     const [isOpen, setIsOpen] = useState<boolean>(false);
+    const activeSection = useScrollSpy(SECTION_IDS);
 
     useEffect(() => {
         if (isOpen) {
@@ -34,18 +38,18 @@ const Navbar = () => {
 
             <header
                 className={cn(
-                    "fixed top-4 inset-x-0 mx-auto max-w-6xl px-2 md:px-12 z-[100] transform th",
+                    "fixed top-4 inset-x-0 mx-auto max-w-6xl px-2 md:px-12 z-[100] transform",
                     isOpen ? "h-[calc(100%-24px)]" : "h-12"
                 )}
             >
-                <Wrapper className="backdrop-blur-lg rounded-xl lg:rounded-2xl border border-[rgba(124,124,124,0.2)] px- md:px-2 flex items-center justify-start">
+                <Wrapper className="backdrop-blur-lg rounded-xl lg:rounded-2xl border border-[rgba(124,124,124,0.2)] px-2 md:px-2 flex items-center justify-start">
                     <div className="flex items-center justify-between w-full sticky mt-[7px] lg:mt-auto mb-auto inset-x-0">
                         <div className="flex items-center flex-1 lg:flex-none pl-1">
                             <Link href="/" className="text-lg font-semibold text-foreground">
                                 <Image src="/logo.png" alt="Logo" width={120} height={40} className="h-8 w-auto object-contain" />
                             </Link>
                             <div className="items-center hidden ml-4 lg:flex">
-                                <Menu />
+                                <Menu activeSection={activeSection} />
                             </div>
                         </div>
                         <div className="items-center flex gap-2 lg:gap-4">
@@ -62,7 +66,7 @@ const Navbar = () => {
                             </Button>
                         </div>
                     </div>
-                    <MobileMenu isOpen={isOpen} setIsOpen={setIsOpen} />
+                    <MobileMenu isOpen={isOpen} setIsOpen={setIsOpen} activeSection={activeSection} />
                 </Wrapper>
             </header>
 

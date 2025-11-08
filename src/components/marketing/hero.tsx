@@ -41,7 +41,7 @@ const Hero = () => {
     }, []);
 
     return (
-        <div className="flex flex-col items-center text-center w-full max-w-5xl my-24 mx-auto z-40 relative">
+        <section id="home" className="flex flex-col items-center text-center w-full max-w-5xl my-24 mx-auto z-40 relative">
             <Container delay={0.0}>
                 <div className="pl-2 pr-1 py-1 rounded-full border border-foreground/10 hover:border-foreground/15 backdrop-blur-lg cursor-pointer flex items-center gap-2.5 select-none w-max mx-auto">
                     <div className="w-3.5 h-3.5 rounded-full bg-primary/40 flex items-center justify-center relative">
@@ -101,7 +101,7 @@ const Hero = () => {
                     </div>
                 </div>
             </Container>
-        </div>
+        </section>
     )
 };
 

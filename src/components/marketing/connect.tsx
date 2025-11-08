@@ -5,7 +5,7 @@ import { SectionBadge } from "../ui/section-bade";
 
 const Connect = () => {
     return (
-        <div className="flex flex-col items-center justify-center py-8 md:py-12 w-full">
+        <section id="connect" className="flex flex-col items-center justify-center py-8 md:py-12 w-full">
             <Container>
                 <div className="flex flex-col items-center text-center max-w-2xl mx-auto">
                     <SectionBadge title="Platform Integrations" />
@@ -29,7 +29,7 @@ const Connect = () => {
                     />
                 </div>
             </Container>
-        </div>
+        </section>
     )
 };
 

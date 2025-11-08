@@ -6,7 +6,7 @@ import { SectionBadge } from "../ui/section-bade";
 
 const Perks = () => {
     return (
-        <div className="flex flex-col items-center justify-center py-12 md:py-16 lg:py-24 w-full">
+        <section id="perks" className="flex flex-col items-center justify-center py-12 md:py-16 lg:py-24 w-full">
             <Container>
                 <div className="flex flex-col items-center text-center max-w-2xl mx-auto">
                     <SectionBadge title="Perks" />
@@ -27,7 +27,7 @@ const Perks = () => {
                     </div>
                 </div>
             </Container>
-        </div>
+        </section>
     )
 };
 

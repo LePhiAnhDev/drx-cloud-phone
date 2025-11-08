@@ -13,7 +13,7 @@ const PLATFORMS = [
 
 const Companies = () => {
     return (
-        <div className="flex w-full py-20">
+        <section id="companies" className="flex w-full py-20">
             <div className="flex flex-col items-center justify-center text-center w-full py-2">
                 <h2 className="text-xl heading">
                     Supported Platforms
@@ -36,7 +36,7 @@ const Companies = () => {
                     <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 };
 

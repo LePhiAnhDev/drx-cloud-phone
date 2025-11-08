@@ -9,7 +9,7 @@ const secondRow = REVIEWS.slice(REVIEWS.length / 2);
 
 const Reviews = () => {
     return (
-        <div className="flex flex-col items-center justify-center py-12 md:py-16 lg:py-24  w-full">
+        <section id="reviews" className="flex flex-col items-center justify-center py-12 md:py-16 lg:py-24  w-full">
             <Container>
                 <div className="flex flex-col items-center text-center max-w-xl mx-auto">
                     <SectionBadge title="Our Customers" />
@@ -41,7 +41,7 @@ const Reviews = () => {
                     </div>
                 </div>
             </Container>
-        </div>
+        </section>
     )
 };
 

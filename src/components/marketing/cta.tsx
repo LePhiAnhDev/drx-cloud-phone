@@ -6,7 +6,7 @@ import RetroGrid from "../ui/retro-grid";
 
 const CTA = () => {
     return (
-        <div className="flex flex-col items-center justify-center py-12 md:py-16 lg:py-24 w-full relative">
+        <section id="cta" className="flex flex-col items-center justify-center py-12 md:py-16 lg:py-24 w-full relative">
             <Container>
                 <div className="flex flex-col items-center justify-center text-center w-full px-4 md:px-0 mx-auto h-[500px] border border-foreground/10 rounded-3xl overflow-hidden relative">
                     <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-12 bg-violet-500 blur-[10rem]"></div>
@@ -40,7 +40,7 @@ const CTA = () => {
                     />
                 </div>
             </Container>
-        </div>
+        </section>
     )
 };
 
