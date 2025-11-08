@@ -16,29 +16,7 @@
 
 ---
 
-## 📋 Table of Contents
-
-- [About](#-about)
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [Getting Started](#-getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Environment Variables](#environment-variables)
-  - [Running the Project](#running-the-project)
-- [Project Structure](#-project-structure)
-- [Configuration](#-configuration)
-- [Available Scripts](#-available-scripts)
-- [Key Features & Components](#-key-features--components)
-- [Pricing Plans](#-pricing-plans)
-- [Platform Support](#-platform-support)
-- [Contributing](#-contributing)
-- [License](#-license)
-- [Links](#-links)
-
----
-
-## 🎯 About
+## About
 
 DrXCloudPhone is a cutting-edge wireless device management system designed to operate millions of iPhone and Samsung devices at scale. The platform processes native original videos to legitimately bypass platform policies with maximum effectiveness, making it ideal for businesses operating across multiple social media and e-commerce platforms.
 
@@ -52,9 +30,9 @@ DrXCloudPhone is a cutting-edge wireless device management system designed to op
 
 ---
 
-## ✨ Features
+## Features
 
-### 🚀 Core Capabilities
+### Core Capabilities
 
 - **Millions of Devices**: The only wireless system operating millions of iPhones & Samsungs for maximum scale and efficiency
 - **Native Video Processing**: Process original videos to legitimately bypass platform policies with maximum effectiveness
@@ -65,7 +43,7 @@ DrXCloudPhone is a cutting-edge wireless device management system designed to op
 - **Feedback-Driven**: Continuously improved based on user feedback to best suit your needs
 - **Highest Efficiency**: Streamlined operations and automated workflows ensure maximum productivity and minimal manual intervention
 
-### 🎨 UI/UX Features
+### UI/UX Features
 
 - Modern, responsive design with dark mode support
 - Smooth animations powered by Framer Motion and GSAP
@@ -75,7 +53,7 @@ DrXCloudPhone is a cutting-edge wireless device management system designed to op
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 ### Core Framework
 - **[Next.js 14.2.6](https://nextjs.org/)** - React framework with App Router
@@ -111,146 +89,11 @@ DrXCloudPhone is a cutting-edge wireless device management system designed to op
 
 ---
 
-## 🚀 Getting Started
-
-### Prerequisites
-
-Before you begin, ensure you have the following installed:
-
-- **Node.js** 18.x or higher
-- **pnpm** (recommended) or npm/yarn
-- **Git**
-
-### Installation
-
-1. **Clone the repository**
-
-```bash
-git clone https://github.com/your-username/drx-cloud-phone.git
-cd drx-cloud-phone
-```
-
-2. **Install dependencies**
-
-```bash
-pnpm install
-# or
-npm install
-# or
-yarn install
-```
-
-3. **Set up environment variables**
-
-Copy the example environment file and fill in your values:
-
-```bash
-cp env.example .env.local
-```
-
-Edit `.env.local` with your configuration:
-
-```env
-NEXT_PUBLIC_APP_NAME=DrXCloudPhone
-NEXT_PUBLIC_APP_DOMAIN=your-domain.com
-```
-
-### Running the Project
-
-**Development Mode**
-
-```bash
-pnpm dev
-# or
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
-
-**Production Build**
-
-```bash
-pnpm build
-pnpm start
-# or
-npm run build
-npm start
-```
-
-**Linting**
-
-```bash
-pnpm lint
-# or
-npm run lint
-```
-
----
-
-## 📁 Project Structure
-
-```
-drx-cloud-phone/
-├── public/                 # Static assets
-│   ├── brands/            # Brand logos (Facebook, Google, Instagram, etc.)
-│   ├── fonts/             # Custom fonts (Satoshi, Switzer, Walsheim)
-│   ├── images/            # Image assets
-│   ├── avatar.jpg         # Avatar image
-│   ├── logo.png           # Logo
-│   └── video.MP4          # Video assets
-├── src/
-│   ├── app/               # Next.js App Router
-│   │   ├── (marketing)/   # Marketing pages group
-│   │   │   ├── layout.tsx
-│   │   │   └── page.tsx   # Home page
-│   │   └── layout.tsx     # Root layout
-│   ├── components/        # React components
-│   │   ├── global/        # Global components (Background, Container, etc.)
-│   │   ├── marketing/     # Marketing page components
-│   │   │   ├── hero.tsx
-│   │   │   ├── features.tsx
-│   │   │   ├── pricing.tsx
-│   │   │   ├── reviews.tsx
-│   │   │   ├── navbar.tsx
-│   │   │   └── footer.tsx
-│   │   └── ui/            # Reusable UI components (shadcn/ui)
-│   ├── constants/         # Constants and configuration
-│   │   ├── site.ts        # Site configuration
-│   │   ├── plans.ts       # Pricing plans
-│   │   ├── perks.ts       # Feature perks
-│   │   ├── reviews.ts     # Customer reviews
-│   │   └── links.ts       # Navigation links
-│   ├── functions/         # Utility functions
-│   │   ├── cn.ts          # Class name utility
-│   │   └── metadata.ts    # Metadata generation
-│   ├── hooks/             # Custom React hooks
-│   │   ├── use-click-outside.ts
-│   │   └── use-scroll-spy.ts
-│   ├── lib/               # Library configurations
-│   └── styles/            # Global styles
-│       └── globals.css    # Global CSS with Tailwind
-├── .eslintrc.json         # ESLint configuration
-├── .gitignore             # Git ignore rules
-├── components.json        # shadcn/ui configuration
-├── env.example            # Environment variables example
-├── LICENSE                # MIT License
-├── next.config.mjs        # Next.js configuration
-├── package.json           # Dependencies and scripts
-├── postcss.config.mjs     # PostCSS configuration
-├── pnpm-lock.yaml         # pnpm lock file
-├── tailwind.config.ts     # Tailwind CSS configuration
-└── tsconfig.json          # TypeScript configuration
-```
-
----
-
-## ⚙️ Configuration
+## Configuration
 
 ### Environment Variables
 
-Create a `.env.local` file in the root directory:
+Create a `.env` file in the root directory:
 
 ```env
 # Application
@@ -277,7 +120,7 @@ The project uses strict TypeScript configuration with path aliases:
 
 ---
 
-## 📜 Available Scripts
+## Available Scripts
 
 | Script | Description |
 |--------|-------------|
@@ -288,7 +131,7 @@ The project uses strict TypeScript configuration with path aliases:
 
 ---
 
-## 🎨 Key Features & Components
+## Key Features & Components
 
 ### Marketing Components
 
@@ -318,29 +161,10 @@ Built with shadcn/ui and Radix UI primitives:
 - Particle effects
 - Spotlight effects
 - Grid and dot pattern backgrounds
-
+- 
 ---
 
-## 💰 Pricing Plans
-
-### Starter
-- **Price**: $99/month or $990/year
-- **Devices**: Up to 100 devices
-- **Features**: Basic video processing, 3 platforms, community support
-
-### Professional ⭐ Most Popular
-- **Price**: $299/month or $2,990/year
-- **Devices**: Up to 1,000 devices
-- **Features**: Advanced native video processing, all platform integrations, priority support, full AI ecosystem access
-
-### Enterprise
-- **Price**: $999/month or $9,990/year
-- **Devices**: Unlimited devices
-- **Features**: Premium video processing, dedicated account manager, enterprise-grade security, 24/7 priority support, custom SLA
-
----
-
-## 🌐 Platform Support
+## Platform Support
 
 DrXCloudPhone supports integration with:
 
@@ -354,47 +178,6 @@ DrXCloudPhone supports integration with:
 
 ---
 
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
----
-
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 🔗 Links
-
-- **Application**: [https://app.drxcloudphone.com](https://app.drxcloudphone.com)
-- **Registration**: [https://app.drxcloudphone.com/register](https://app.drxcloudphone.com/register)
-- **Documentation**: Coming soon
-- **Support**: Contact us through the application
-
----
-
-## 🙏 Acknowledgments
-
-- Built with [Next.js](https://nextjs.org/)
-- UI components from [shadcn/ui](https://ui.shadcn.com/)
-- Icons from [Lucide](https://lucide.dev/)
-- Fonts: Satoshi, Switzer, Walsheim
-
----
-
-<div align="center">
-
-**Made with ❤️ by the DrXCloudPhone Team**
-
-[⬆ Back to Top](#drxcloudphone)
-
-</div>
-
