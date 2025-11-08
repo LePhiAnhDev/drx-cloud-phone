@@ -1,14 +1,14 @@
 import Marquee from "../ui/marquee";
-import { Facebook, Instagram, Youtube, Twitter, ShoppingBag, Search } from "lucide-react";
+import Image from "next/image";
 
 const PLATFORMS = [
-    { name: "TikTok", icon: null },
-    { name: "Facebook", icon: Facebook },
-    { name: "Instagram", icon: Instagram },
-    { name: "Google", icon: Search },
-    { name: "YouTube", icon: Youtube },
-    { name: "Shopee", icon: ShoppingBag },
-    { name: "X", icon: Twitter },
+    { name: "TikTok", logo: "/brands/tiktok.svg" },
+    { name: "Facebook", logo: "/brands/facebook.svg" },
+    { name: "Instagram", logo: "/brands/instagram.svg" },
+    { name: "Google", logo: "/brands/google.svg" },
+    { name: "YouTube", logo: "/brands/youtube.svg" },
+    { name: "Shopee", logo: "/brands/shopee.svg" },
+    { name: "X", logo: "/brands/x.svg" },
 ];
 
 const Companies = () => {
@@ -40,12 +40,18 @@ const Companies = () => {
     )
 };
 
-const PlatformBadge = ({ platform }: { platform: { name: string; icon: any } }) => {
-    const Icon = platform.icon;
+const PlatformBadge = ({ platform }: { platform: { name: string; logo: string } }) => {
     return (
-        <div className="flex items-center gap-2 px-6 py-3 rounded-lg border border-foreground/10 bg-foreground/5 hover:bg-foreground/10 transition-colors">
-            {Icon && <Icon className="w-5 h-5" />}
-            <span className="text-base font-medium">{platform.name}</span>
+        <div className="flex items-center gap-3 px-6 py-3 rounded-lg border border-foreground/10 bg-foreground/5 hover:bg-foreground/10 transition-colors">
+            <div className="relative w-5 h-5 flex-shrink-0">
+                <Image
+                    src={platform.logo}
+                    alt={platform.name}
+                    fill
+                    className="object-contain"
+                />
+            </div>
+            <span className="text-base font-medium whitespace-nowrap">{platform.name}</span>
         </div>
     );
 };
