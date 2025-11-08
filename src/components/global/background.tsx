@@ -11,9 +11,9 @@ const Background = ({ children }: Props) => {
         <main id='background' className="flex-none min-h-scree -z-10 relative">
             {/* Dot Grid Background */}
             <DotGrid
-                dotSize={2}
+                dotSize={3.5}
                 gap={24}
-                baseColor="#3b3b3b"
+                baseColor="#4a4a4a"
                 activeColor="#8b5cf6"
                 proximity={120}
                 speedTrigger={100}
