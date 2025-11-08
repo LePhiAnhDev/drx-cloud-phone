@@ -1,7 +1,7 @@
 import { REVIEWS } from "@/constants";
 import Container from "../global/container";
 import Marquee from "../ui/marquee";
-import { SectionBadge } from "../ui/section-bade";
+import { SectionBadge } from "../ui/section-badge";
 import Image from "next/image";
 
 const firstRow = REVIEWS.slice(0, REVIEWS.length / 2);

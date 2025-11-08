@@ -1,7 +1,7 @@
 "use client";
 
 import Container from "../global/container";
-import { SectionBadge } from "../ui/section-bade";
+import { SectionBadge } from "../ui/section-badge";
 import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
 import { Card, CardContent, CardHeader } from "../ui/card";

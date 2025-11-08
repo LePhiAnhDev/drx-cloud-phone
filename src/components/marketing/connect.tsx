@@ -1,7 +1,7 @@
 import Container from "../global/container";
 import PlatformOrbit from "./platform-orbit";
 import { Particles } from "../ui/particles";
-import { SectionBadge } from "../ui/section-bade";
+import { SectionBadge } from "../ui/section-badge";
 
 const Connect = () => {
     return (

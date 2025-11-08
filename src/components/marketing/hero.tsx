@@ -19,8 +19,8 @@ const Hero = () => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                         // Video is visible, play it
-                        videoElement.play().catch((error) => {
-                            console.log("Autoplay prevented:", error);
+                        videoElement.play().catch(() => {
+                            // Autoplay prevented by browser
                         });
                     } else {
                         // Video is not visible, pause it

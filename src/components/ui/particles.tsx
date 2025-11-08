@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 
 interface MousePosition {
     x: number;
@@ -87,14 +87,17 @@ export const Particles: React.FC<ParticlesProps> = ({
         return () => {
             window.removeEventListener("resize", initCanvas);
         };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [color]);
 
     useEffect(() => {
         onMouseMove();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [mousePosition.x, mousePosition.y]);
 
     useEffect(() => {
         initCanvas();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [refresh]);
 
     const initCanvas = () => {
