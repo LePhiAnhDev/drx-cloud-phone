@@ -122,10 +122,10 @@ const Pricing = () => {
                                                     )}
                                                 </div>
                                             </td>
-                                            <td className="p-4 md:p-6 text-center text-base font-semibold text-primary">
+                                            <td className={`p-4 md:p-6 text-center text-base font-semibold ${device.model === "iPhone 7G" ? "text-red-500" : "text-primary"}`}>
                                                 {formatPrice(device.withDeposit)}/mo
                                             </td>
-                                            <td className="p-4 md:p-6 text-center text-base font-semibold text-primary">
+                                            <td className={`p-4 md:p-6 text-center text-base font-semibold ${device.model === "iPhone 7G" ? "text-red-500" : "text-primary"}`}>
                                                 {formatPrice(device.withoutDeposit)}/mo
                                             </td>
                                             <td className="p-4 md:p-6 text-center text-base font-semibold">
@@ -170,14 +170,14 @@ const Pricing = () => {
                                             <Banknote className="w-3.5 h-3.5" />
                                             With Deposit
                                         </span>
-                                        <span className="font-semibold text-primary">{formatPrice(device.withDeposit)}/mo</span>
+                                        <span className={`font-semibold ${device.model === "iPhone 7G" ? "text-red-500" : "text-primary"}`}>{formatPrice(device.withDeposit)}/mo</span>
                                     </div>
                                     <div className="flex justify-between items-center py-2 border-b border-border/40">
                                         <span className="text-sm text-muted-foreground flex items-center gap-2">
                                             <TrendingUp className="w-3.5 h-3.5" />
                                             No Deposit
                                         </span>
-                                        <span className="font-semibold text-primary">{formatPrice(device.withoutDeposit)}/mo</span>
+                                        <span className={`font-semibold ${device.model === "iPhone 7G" ? "text-red-500" : "text-primary"}`}>{formatPrice(device.withoutDeposit)}/mo</span>
                                     </div>
                                     <div className="flex justify-between items-center py-2">
                                         <span className="text-sm text-muted-foreground flex items-center gap-2">
