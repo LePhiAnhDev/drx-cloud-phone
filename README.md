@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![DrXCloudPhone Logo](./public/logo.png)
+<img src="./public/logo.png" alt="DrXCloudPhone Logo" width="180" />
 
 **The only wireless system operating millions of iPhones & Samsungs, processing native original videos to legitimately bypass platform policies.**
 
@@ -11,8 +11,6 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4.1-38bdf8)](https://tailwindcss.com/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-
-[Features](#-features) • [Tech Stack](#-tech-stack) • [Getting Started](#-getting-started) • [Project Structure](#-project-structure) • [Configuration](#-configuration)
 
 </div>
 
