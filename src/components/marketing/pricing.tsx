@@ -21,6 +21,7 @@ const DEVICE_PLANS = [
         withDeposit: 150,
         withoutDeposit: 180,
         deposit: 1000,
+        highlight: true,
     },
     {
         model: "iPhone SE3",
@@ -33,43 +34,6 @@ const DEVICE_PLANS = [
         withDeposit: 300,
         withoutDeposit: 330,
         deposit: 2550,
-    },
-    {
-        model: "iPhone XS",
-        withDeposit: 300,
-        withoutDeposit: 330,
-        deposit: 3050,
-    },
-    {
-        model: "iPhone 12",
-        withDeposit: 400,
-        withoutDeposit: 430,
-        deposit: 5050,
-    },
-    {
-        model: "iPhone 13",
-        withDeposit: 550,
-        withoutDeposit: 580,
-        deposit: null, // Out of stock
-        highlight: true,
-    },
-    {
-        model: "iPhone XS Max",
-        withDeposit: 350,
-        withoutDeposit: 380,
-        deposit: 4050,
-    },
-    {
-        model: "iPhone 12 Pro Max",
-        withDeposit: 450,
-        withoutDeposit: 480,
-        deposit: 7550,
-    },
-    {
-        model: "iPhone 14 Plus",
-        withDeposit: 450,
-        withoutDeposit: 480,
-        deposit: 6550,
     },
 ];
 

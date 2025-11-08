@@ -19,9 +19,13 @@ const CTA = () => {
                         </p>
                         <div className="flex flex-col md:flex-row items-center justify-center w-full gap-6 mt-6">
                             <Button asChild size="lg" className="w-full md:w-max">
-                                <Link href="">
+                                <a 
+                                    href="https://app.drxcloudphone.com/register" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                >
                                     Get Started
-                                </Link>
+                                </a>
                             </Button>
                             <Button asChild size="lg" variant="secondary" className="w-full md:w-max">
                                 <Link href="">

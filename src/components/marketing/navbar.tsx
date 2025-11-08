@@ -60,7 +60,7 @@ const Navbar = () => {
                                 asChild
                             >
                                 <a 
-                                    href="https://t.me/tippingseekaff" 
+                                    href="https://app.drxcloudphone.com/register" 
                                     target="_blank" 
                                     rel="noopener noreferrer"
                                 >
