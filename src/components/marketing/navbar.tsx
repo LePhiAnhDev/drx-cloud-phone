@@ -3,6 +3,7 @@
 import { cn } from "@/functions";
 import { ArrowRightIcon, XIcon } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from 'react';
 import Icons from "../global/icons";
 import Wrapper from "../global/wrapper";
@@ -41,7 +42,7 @@ const Navbar = () => {
                     <div className="flex items-center justify-between w-full sticky mt-[7px] lg:mt-auto mb-auto inset-x-0">
                         <div className="flex items-center flex-1 lg:flex-none pl-1">
                             <Link href="/" className="text-lg font-semibold text-foreground">
-                                <Icons.icon className="w-auto h-5" />
+                                <Image src="/logo.png" alt="Logo" width={120} height={20} className="w-auto h-5 object-contain" />
                             </Link>
                             <div className="items-center hidden ml-4 lg:flex">
                                 <Menu />

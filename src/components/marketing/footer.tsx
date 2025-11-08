@@ -1,5 +1,6 @@
 import { FOOTER_LINKS } from "@/constants";
 import Link from "next/link";
+import Image from "next/image";
 import Container from "../global/container";
 import Icons from "../global/icons";
 import Wrapper from "../global/wrapper";
@@ -20,7 +21,7 @@ const Footer = () => {
                     />
                     <div className="flex flex-col items-start max-w-48">
                         <div className="flex items-center gap-2">
-                            <Icons.icon className="w-5 h-5" />
+                            <Image src="/logo.png" alt="Logo" width={40} height={20} className="h-5 w-auto object-contain" />
                             <span className="text-xl font-medium">
                                 DrxCloudPhone
                             </span>

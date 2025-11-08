@@ -24,14 +24,7 @@ export const generateMetadata = ({
         {
             rel: "icon",
             type: "image/png",
-            sizes: "32x32",
-            url: "/icons/favicon-32x32.png"
-        },
-        {
-            rel: "icon",
-            type: "image/png",
-            sizes: "16x16",
-            url: "/icons/favicon-16x16.png"
+            url: "/logo.png"
         },
     ],
     noIndex = false,
