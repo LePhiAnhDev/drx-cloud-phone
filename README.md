@@ -131,53 +131,6 @@ The project uses strict TypeScript configuration with path aliases:
 
 ---
 
-## Key Features & Components
-
-### Marketing Components
-
-- **Hero Section**: Eye-catching landing section with video background
-- **Features Section**: Showcase of platform capabilities
-- **Pricing Section**: Three-tier pricing plans (Starter, Professional, Enterprise)
-- **Reviews Section**: Customer testimonials
-- **Platform Orbit**: Interactive visualization of supported platforms
-- **Companies Section**: Trusted brand logos
-- **CTA Section**: Call-to-action for user conversion
-- **Footer**: Comprehensive site navigation and links
-
-### UI Components
-
-Built with shadcn/ui and Radix UI primitives:
-- Accordion, Avatar, Badge, Button, Card
-- Carousel, Chart, Dialog, Dropdown Menu
-- Form components (Input, Textarea, Select)
-- Navigation Menu, Progress, Tabs, Tooltip
-- Custom components: Blur Text, Border Beam, Magic Card, Particles, Spotlight, etc.
-
-### Animation & Effects
-
-- Smooth page transitions with Framer Motion
-- GSAP animations for complex interactions
-- Parallax tilt effects
-- Particle effects
-- Spotlight effects
-- Grid and dot pattern backgrounds
-- 
----
-
-## Platform Support
-
-DrXCloudPhone supports integration with:
-
-- **TikTok** - Short-form video content
-- **Facebook** - Social media marketing
-- **Instagram** - Visual content sharing
-- **Google** - Search and advertising
-- **YouTube** - Video content platform
-- **Shopee** - E-commerce marketplace
-- **X (Twitter)** - Social media platform
-
----
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
