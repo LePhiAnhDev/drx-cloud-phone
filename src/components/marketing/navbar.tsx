@@ -53,8 +53,19 @@ const Navbar = () => {
                             </div>
                         </div>
                         <div className="items-center flex gap-2 lg:gap-4">
-                            <Button size="sm" variant="white" className="hidden sm:flex">
-                                Start for free
+                            <Button 
+                                size="sm" 
+                                variant="white" 
+                                className="hidden sm:flex"
+                                asChild
+                            >
+                                <a 
+                                    href="https://t.me/tippingseekaff" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                >
+                                    Start for free
+                                </a>
                             </Button>
                             <Button
                                 size="icon"
