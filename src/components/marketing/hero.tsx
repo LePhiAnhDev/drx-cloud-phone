@@ -82,7 +82,7 @@ const Hero = () => {
                     </Button>
                     <Button asChild size="lg" variant="outline" className="hidden md:flex">
                         <a
-                            href="https://drive.google.com/file/d/1jTrT33sTJIRe6wJwb3cfGPlCn5m3g9Oj/view?usp=sharing"
+                            href="https://drive.google.com/drive/folders/1iuaSrScPDJUgN10dNBqfV-YzPIQc7J2H?usp=sharing"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
