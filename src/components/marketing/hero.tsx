@@ -72,18 +72,22 @@ const Hero = () => {
             <Container delay={0.2}>
                 <div className="flex items-center justify-center md:gap-x-6 mt-8">
                     <Button size="lg" asChild>
-                        <a 
-                            href="https://app.drxcloudphone.com/register" 
-                            target="_blank" 
+                        <a
+                            href="https://app.drxcloudphone.com/register"
+                            target="_blank"
                             rel="noopener noreferrer"
                         >
                             Start for free
                         </a>
                     </Button>
                     <Button asChild size="lg" variant="outline" className="hidden md:flex">
-                        <Link href="#">
-                            How it works
-                        </Link>
+                        <a
+                            href="https://drive.google.com/file/d/1jTrT33sTJIRe6wJwb3cfGPlCn5m3g9Oj/view?usp=sharing"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            View iPhone
+                        </a>
                     </Button>
                 </div>
             </Container>

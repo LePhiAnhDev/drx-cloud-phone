@@ -29,15 +29,26 @@ const Footer = () => {
                         <p className="text-base text-muted-foreground leading-relaxed mt-4 w-full max-w-none md:max-w-full">
                             The only wireless system operating millions of iPhones & Samsungs, processing native original videos to legitimately bypass platform policies.
                         </p>
-                        <Button className="mt-8 w-full sm:w-auto" asChild>
-                            <a 
-                                href="https://app.drxcloudphone.com/register" 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                            >
-                                Start for free
-                            </a>
-                        </Button>
+                        <div className="flex flex-col sm:flex-row gap-4 mt-8 w-full sm:w-auto">
+                            <Button className="w-full sm:w-auto" asChild>
+                                <a 
+                                    href="https://app.drxcloudphone.com/register" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                >
+                                    Start for free
+                                </a>
+                            </Button>
+                            <Button className="w-full sm:w-auto" variant="outline" asChild>
+                                <a 
+                                    href="https://t.me/tippingseekaff/243" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                >
+                                    Contact us
+                                </a>
+                            </Button>
+                        </div>
                     </div>
                     <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 w-full md:w-auto md:flex-shrink-0 md:max-w-lg mt-0">
                         {FOOTER_LINKS?.map((section, index) => (
